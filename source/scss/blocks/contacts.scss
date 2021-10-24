@@ -1,0 +1,161 @@
+.contacts {
+  position: relative;
+  width: 428px;
+  margin: 0 auto;
+  padding: 36px 56px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px transparentize($color: $blue_00, $amount: 0.8);
+  overflow: auto;
+  animation: showModal 1s;
+
+  @media (max-width: $mobile-width) {
+    width: 290px;
+    padding: 26px 20px;
+  }
+}
+
+@keyframes showModal {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: $blue_01;
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+    line-height: auto;
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__name,
+.contacts__email,
+.contacts__message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts label {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $blue_01;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.contacts input {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $blue_01;
+  padding: 20px 0 20px 40px;
+  border: 1px solid rgba($blue_03, 0.5);
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  &::placeholder {
+    font-weight: 200;
+    color: rgba($blue_01, 0.2);
+    text-transform: capitalize;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 10px 0 10px 20px;
+  }
+}
+
+.contacts textarea {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $blue_01;
+  min-height: 102px;
+  padding: 20px 20px 10px 40px;
+  border: 1px solid rgba($blue_03, 0.5);
+  border-radius: 10px;
+  resize: none;
+
+  &::placeholder {
+    font-weight: 200;
+    color: rgba($blue_01, 0.2);
+    text-transform: capitalize;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 10px 10px 10px 20px;
+  }
+}
+
+.contacts .error {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $red;
+}
+
+.contacts__button {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  background-color: $blue_04;
+  color: $white;
+  border: none;
+  border-radius: 10px;
+  padding: 23px 0;
+  margin-top: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 2px 10px 10px rgba($blue_04, 0.3);
+
+  &:hover {
+    background-color: $blue_03;
+  }
+
+  &:active {
+    color: rgba($white, 0.2);
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 20px;
+  }
+}
+
+.contacts__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 700;
+  color: $blue_04;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $blue_02;
+  }
+}

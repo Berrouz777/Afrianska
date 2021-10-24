@@ -1,0 +1,10 @@
+@mixin list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin container {
+  max-width: 940px;
+  margin: 0 auto;
+}
